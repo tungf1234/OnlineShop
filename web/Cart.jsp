@@ -114,11 +114,6 @@
                                         </c:forEach>
                                         <tr>
                                             <td class="actions" colspan="6">
-                                                <div class="coupon">
-                                                    <label for="coupon_code">Coupon:</label>
-                                                    <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
-                                                    <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
-                                                </div>
                                                 <form action="checkout">
                                                     <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
                                                 </form>
