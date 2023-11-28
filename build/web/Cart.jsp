@@ -1,7 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@ page import="java.io.*,java.util.*, javax.servlet.*" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--
@@ -95,11 +93,13 @@
                                                 <td class="product-price">
                                                     <span class="amount">${i.product.productPrice}$</span> 
                                                 </td>
-                                                <td class="product-quantity" style="display: flex;justify-content: center;padding-bottom: 0px;flex-direction: row;flex-wrap: wrap;align-items: baseline;">       
-                                                    <a href="process?num=-1&id=${i.product.productId}"><input type="button" value="-" class="minus"></a>
-                                                    <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="${i.quantity}" style="width: 70px;">
-                                                    <a href="process?num=1&id=${i.product.productId}"><input type="button" value="+" class="plus"></a>
-                                                </td>
+                                                <td class="product-quantity">
+                                                        <div class="quantity buttons_added">
+                                                            <a href="process?num=-1&id=${i.product.productId}"><input type="button" value="-" class="minus"></a>
+                                                            <input type="number" size="4" class="input-text qty text product-quantity" title="Qty" value="${i.quantity}">
+                                                            <a href="process?num=1&id=${i.product.productId}"><input type="button" value="+" class="plus"></a>
+                                                        </div>
+                                                    </td>
                                                 <td class="product-subtotal">
                                                     <fmt:formatNumber pattern="##.##" value="${(i.product.productPrice*i.quantity)}"/>$
                                                 </td>
@@ -119,9 +119,10 @@
                                                     <input type="text" placeholder="Coupon code" value="" id="coupon_code" class="input-text" name="coupon_code">
                                                     <input type="submit" value="Apply Coupon" name="apply_coupon" class="button">
                                                 </div>
-                                                <form action="checkout" method="">
+                                                <form action="checkout">
                                                     <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
                                                 </form>
+                                                
                                             </td>
                                         </tr>
                                     </tbody>
@@ -177,6 +178,7 @@
         </div>
 
         <%@include file="Footer.jsp" %>
+        
 
         <!-- Latest jQuery form server -->
         <script src="https://code.jquery.com/jquery.min.js"></script>

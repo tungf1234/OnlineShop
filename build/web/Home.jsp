@@ -18,6 +18,7 @@
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -36,54 +37,90 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style>
+            .product-offer {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .product-offer img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+
+            .product-offer:hover img {
+                transform: scale(1.05);
+            }
+
+            .offer-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .offer-text h6,
+            .offer-text h3 {
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            }
+
+            .offer-text h6 {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .offer-text h3 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+
+            .offer-text a {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+
+            .offer-text a:hover {
+                background-color: #0056b3;
+            }
+            .single-product {
+                border: 1px solid #000; /* Đường viền đen 1 pixel */
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Hiệu ứng lồi lên */
+            }
+        </style>
+
     </head>
     <body>
         <%@include file="Header.jsp" %>
         <!-- End header area -->
-
         <c:set var="currentPage" value="home"/>
         <%@include file="Menu.jsp" %>
         <!-- End mainmenu area -->
-
         <div class="slider-area">
             <!-- Slider -->
             <div class="block-slider block-slider4">
                 <ul class="" id="bxslider-home4">
-                    <li>
-                        <img src="img/h4-slide.png" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                iPhone <span class="primary">6 <strong>Plus</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">Dual SIM</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                    <div>
+                        <li style="display: flex; justify-content: center;">
+                            <img style="height: 80% ;width: 90%;padding-top:8px" 
+                                 img src="https://storage-asset.msi.com/global/picture/banner/banner_167238717118f8b0304cb96763a323a8a7724621b2.jpeg" alt="Slide">                        
+                        </li>
+                        <div class="caption-group" style="transform: translate(-133%, 200%);">
+                            <a class="caption button-radius" href="shop"><span class="icon"></span>Shop Now</a>
                         </div>
-                    </li>
-                    <li><img src="img/h4-slide2.png" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                by one, get one <span class="primary">50% <strong>off</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">school supplies & backpacks.*</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                        </div>
-                    </li>
-                    <li><img src="img/h4-slide3.png" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                Apple <span class="primary">Store <strong>Ipod</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">Select Item</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                        </div>
-                    </li>
-                    <li><img src="img/h4-slide4.png" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                Apple <span class="primary">Store <strong>Ipod</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">& Phone</h4>
-                            <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
+                    </div>
+                    <li style="display: flex; justify-content: center;">
+                        <img style="height: 80% ;width: 90%;padding-top:8px" src="https://dlcdnwebimgs.asus.com/gain/89BDEFEE-CC57-4AE1-8DA3-9C12369716CE/fwebp" alt="Slide">
+                        <div class="caption-group" style="transform: translate(-281%, 370%)">
+                            <a class="caption button-radius" href="shop"><span class="icon"></span>Shop now</a>
                         </div>
                     </li>
                 </ul>
@@ -131,20 +168,18 @@
                         <div class="latest-product">
                             <h2 class="section-title">Latest Products</h2>
                             <div class="product-carousel">
-
                                 <c:forEach items="${listPro}" var="p" varStatus="loop">
-                                    <c:if test="${loop.index >= fn:length(listPro) - 7}">
-                                            <div class="single-product">
+                                    <c:if test="${loop.index >= fn:length(listPro) - 7}">                                        
+                                        <div class="single-product">
                                             <div class="product-f-image">
                                                 <img src="${p.imgUrl}" alt="${p.productName}">
                                                 <div class="product-hover">
-                                                    <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                                     <a href="productdetails?mod=${p.productId}&mod1=${p.cateId}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                                 </div>
                                             </div>
-                                            <h2>${p.productName}</h2>
+                                            <h5 style="display: block;text-align: center; padding-top: 5px">${p.productName}</h5>
                                             <div class="product-carousel-price">
-                                                <ins>$${p.productPrice}</ins>
+                                                <ins style="display: block;text-align: center; color: red">$${p.productPrice}</ins>
                                             </div> 
                                         </div>
                                     </c:if>
@@ -156,26 +191,40 @@
             </div>
         </div> <!-- End main content area -->
 
-<!--        <div class="brands-area">
+
+        <div class="product-widget-area">
             <div class="zigzag-bottom"></div>
+            <h2 class="section-title">Special Offer</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="brand-wrapper">
-                            <div class="brand-list">
-                                <c:forEach items="${listBra}" var="b">
-                                    <H2 aaaaa></H2>
-                                    <img src="${b.brandImgUrl}" alt="${b.brandName}" style="width: 270px; height: 150px"> 
-                                </c:forEach>                          
+                    <div class="container-fluid pt-5 pb-3">
+                        <div class="row px-xl-5">
+                            <div class="col-md-6">
+                                <div class="product-offer mb-30" style="height: 300px;">
+                                    <img class="img-fluid" src="img/sale3.jpg" alt="" style="height: 300px ; width: 550px">
+                                    <div class="offer-text">
+                                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                                        <h3 class="text-white mb-3">Special Offer</h3>
+                                        <a href="shop" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="product-offer mb-30" style="height: 300px;">
+                                    <img class="img-fluid" src="img/sale2.jpg" alt="" style="height: 300px ; width: 550px">
+                                    <div class="offer-text">
+                                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                                        <h3 class="text-white mb-3">Special Offer</h3>
+                                        <a href="shop" class="btn btn-primary">Shop Now</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  End brands area -->
-
+        </div>
         <%@include file="Footer.jsp" %>
-
         <!-- Latest jQuery form server -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
 

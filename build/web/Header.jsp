@@ -96,19 +96,20 @@
                                 <c:if test="${empty sessionScope.user && empty sessionScope.usergg}">
                                     <li><a href="login"><i class="fa fa-user"></i> Login</a></li>
                                     </c:if>
-                                <c:if test="${not empty sessionScope.user}">
+                                    <c:if test="${not empty sessionScope.user}">
                                     <li class="hello-trigger">
                                         <a><i class="fa fa-user"></i> Hello ${sessionScope.user.firstName} ${sessionScope.user.lastName}</a>
                                         <div class="submenu">
                                             <ul>
                                                 <li><a href="profile"><i class="fa fa-user"></i> Profile</a></li>
-                                                <li><a href="logout"><i class="fa fa-user"></i> Logout</a></li>
+                                                <li><a href="yourorder"><i class="fa fa-shopping-cart"></i> Your Order</a></li>
+                                                <li><a href="logout"><i class="fa fa-sign-out"></i> Logout</a></li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-                                </c:if>
-                                <c:if test="${not empty sessionScope.usergg}">
+                                    </c:if>
+                                    <c:if test="${not empty sessionScope.usergg}">
                                     <li class="hello-trigger">
                                         <a><i class="fa fa-user"></i> Hello ${sessionScope.usergg.name}</a>
                                         <div class="submenu">
@@ -119,7 +120,7 @@
                                         </div>
                                     </li>
                                     <li><a href="cart"><i class="fa fa-user"></i> My Cart</a></li>
-                                </c:if>
+                                    </c:if>
 
                             </ul>
                         </div>

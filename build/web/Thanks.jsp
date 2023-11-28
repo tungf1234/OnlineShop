@@ -118,7 +118,7 @@
                 </p>
                 <p class="lead">
                     <a class="btn btn-primary btn-sm" href="home" role="button" style="font-size: 15px">Continue to homepage</a>
-                    <a class="btn btn-primary btn-sm" href="Order.jsp" role="button" style="font-size: 15px">Your Order</a>
+                    <a class="btn btn-primary btn-sm" href="yourorder" role="button" style="font-size: 15px">Your Order</a>
                 </p>
             </div>
             

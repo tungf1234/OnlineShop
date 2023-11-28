@@ -88,6 +88,10 @@
         <servlet-name>SortController</servlet-name>
         <servlet-class>Controller.SortController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>Controller.OrderController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -175,6 +179,10 @@
     <servlet-mapping>
         <servlet-name>SortController</servlet-name>
         <url-pattern>/sort</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/yourorder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

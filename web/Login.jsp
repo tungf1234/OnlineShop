@@ -68,10 +68,6 @@
                             <div class="social-login">
                                 <span class="social-label">Or login with</span>
                                 <ul class="socials">
-                                    <li><a href="#"><i
-                                                class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                    <li><a href="#"><i
-                                                class="display-flex-center zmdi zmdi-twitter"></i></a></li>
                                     <li><a href="https://accounts.google.com/o/oauth2/auth?scope=email%20profile&redirect_uri=http://localhost:9999/laptop_online_shop/loginemail&response_type=code&client_id=780232171487-l3i8u7rg7s73qp009p3t775n065ghvp9.apps.googleusercontent.com&approval_prompt=force"><i
                                                 class="display-flex-center zmdi zmdi-google"></i></a></li>
                                 </ul>

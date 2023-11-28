@@ -65,6 +65,15 @@
             function showSuccessAlert() {
                 alert("Product added successfully to the cart!");
             }
+            function fb(customerId, productId) {
+                document.querySelector('.fed').action ="feedback?cid" +customerId +"&pid"+productId;
+                document.querySelector('.fed').submit();
+                show();
+            }
+            
+            function show(){
+                alert("Feedback Successfully!");
+            }
         </script>
     </head>
     <body>
@@ -147,7 +156,7 @@
                                             <div role="tabpanel" class="tab-pane fade" id="profile">
                                                 <c:if test="${not empty sessionScope.user}">
                                                     <h2>Reviews</h2>
-                                                    <form action="feedback">
+                                                    <form action="" class="fed">
                                                         <div class="submit-review">
                                                             <p hidden><label for="name"></label> <input name="customerId" type="text" value="${sessionScope.user.customerId}"></p>
                                                             <p hidden><label for="email"></label> <input name="productId" type="text" value="${pro.productId}"></p>
@@ -157,7 +166,7 @@
                                                                 <p><input type="number" name="vote" min="1" max="5"></p>
                                                             </div>
                                                             <p><label for="review">Your review</label> <textarea name="review" id="" cols="30" rows="10"></textarea></p>
-                                                            <p><input type="submit" value="Submit"></p>
+                                                            <p><button onclick="fb('${sessionScope.user.customerId}', '${pro.productId}')">Submit</button></p>
                                                         </div>
                                                     </form>
                                                 </c:if>

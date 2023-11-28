@@ -67,7 +67,6 @@
                         <ul class="nav navbar-nav">
                             <li class="${currentPage == 'home' ? 'active' : ''}"><a href="home">Home</a></li>
                             <li class="${currentPage == 'shop' ? 'active' : ''}"><a href="shop">Shop page</a></li>
-                            <li class="${currentPage == 'cart' ? 'active' : ''}"><a href="cart">Cart</a></li>
                         </ul>
                     </div>  
                 </div>

@@ -1,102 +1,77 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-        ustora by freshdesignweb.com
-        Twitter: https://twitter.com/freshdesignweb
-        URL: https://www.freshdesignweb.com/ustora/
--->
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ustora Demo</title>
-
-        <!-- Google Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
-    <script>
-        function login() {
-            window.location.href = "Login.jsp";
-        }
-        function logout() {
-            window.location.href = "logout";
-
-        }
-    </script>
     <body>
-        <div class="footer-top-area">
+        <div class="footer-top-area" style="padding-bottom: 15px">
             <div class="zigzag-bottom"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="footer-about-us">
-                            <h2>u<span>Stora</span></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
-                            <div class="footer-social">
-                                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                                <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                            </div>
+                     <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4">Get In Touch</h5>
+                <p class="mb-4"> Welcome to Laptop Store - A trusted destination for technology enthusiasts and lovers of laptop convenience!</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i> Residential land Hoa Lac, Km29, ĐCT08, Thach Hoa, Thach That, Ha Noi</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i> https://gitlab.com/swp391-group4-project/online-shop</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i> +012 345 67890</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="shop"><i class="fa fa-angle-right mr-2"></i>Shop</a>
+                            
+                            <a class="text-secondary mb-2" href="cart"><i class="fa fa-angle-right mr-2"></i>Card</a>
+                            
+                            
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-sm-6"> 
-                        <div class="footer-newsletter">
-                            <h2 class="footer-wid-title">Newsletter</h2>
-                            <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-                            <div class="newsletter-form">
-                                <form action="#">
-                                    <input type="email" placeholder="Type your email">
-                                    <input type="submit" value="Subscribe">
-                                </form>
-                            </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-secondary text-uppercase mb-4">My Account</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-secondary mb-2" href="home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-secondary mb-2" href="shop"><i class="fa fa-angle-right mr-2"></i>Shop</a>
+                            
+                            <a class="text-secondary mb-2" href="cart"><i class="fa fa-angle-right mr-2"></i>Card</a>
+                            
+                            
                         </div>
                     </div>
+                    <div class="col-md-4 mb-5">
+                        
+                        <h6 class="text-secondary text-uppercase mt-4 mb-3">Social Media</h6>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
                 </div>
             </div>
         </div> <!-- End footer top area -->
 
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="copyright">
-                            <p>&copy; 2023</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="footer-card-icon">
-                            <i class="fa fa-cc-discover"></i>
-                            <i class="fa fa-cc-mastercard"></i>
-                            <i class="fa fa-cc-paypal"></i>
-                            <i class="fa fa-cc-visa"></i>
-                        </div>
-                    </div>
-                </div>
+        <div class="footer-bottom-area" style="padding-bottom: 5px">
+            <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy;Design by SWP391- GROUP 4
+                    <a class="text-primary" href="https://gitlab.com/swp391-group4-project/online-shop"> View & Reference to Gitlab</a>
+                </p>
             </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="">
+            </div>
+        </div>
         </div> <!-- End footer bottom area -->
     </body>
+</html>
